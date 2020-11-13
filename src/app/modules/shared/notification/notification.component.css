@@ -1,0 +1,30 @@
+.notification{
+    position: fixed;
+    width: 416px;
+    height: 76px;
+    left: 32px;
+    bottom: 40px;
+    background: #E4E8DB;
+    box-shadow: 0px 8px 24px rgba(4, 146, 242, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.text-notification{
+    margin-left: 10px;
+}
+
+.close-notification{
+    cursor: pointer;
+}
+
+.left-notification{
+    display: flex;
+}

@@ -1,0 +1,7 @@
+
+<div class="container-select-auto">
+    <label class="label-select-auto">{{title}}<span class="required" *ngIf="required">*</span></label>
+    <ng-select [placeholder]="placeholder" [(ngModel)]="value">
+        <ng-option *ngFor="let item of items" [value]="item.id">{{item.name}}</ng-option>
+    </ng-select>
+</div>

@@ -1,0 +1,8 @@
+<div class="input-text">
+    <label class="label-text">{{title}} <span class="required" *ngIf="required">*</span></label>
+    <div class="container-input-text">
+      <ng-content></ng-content>
+      <input [(ngModel)]="value" *ngIf="mask" [mask]="mask" [placeholder]="placeholder" type="text" />
+      <input [(ngModel)]="value" *ngIf="!mask" [mask]="mask" [placeholder]="placeholder" type="text" />
+    </div>
+  </div>

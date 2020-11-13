@@ -1,0 +1,69 @@
+<div class="mop-content">
+  <div class="create-header">
+      <div class="sub-header">
+        <app-btn-back rota="/apontamentos"></app-btn-back>
+      </div>
+      <div class="sub-header center-title">
+        <h1 class="appointment-title">
+            Apontamento de horas
+        </h1>
+        <div class="row-flex">
+          <app-select-input>
+            <app-icon-date class="icon-select"></app-icon-date>
+          </app-select-input>
+        </div>
+      </div>
+  </div>
+  <div class="container-create">
+    <div class="container-form">
+      <div class="container-div">
+        <div class="input-form">
+          <app-datepicker-input title="Data" required="true"></app-datepicker-input>
+        </div>
+        <div class="input-form">
+          <app-text-input mask="00:00" title="Hora Inicial" placeholder="Hora Inicial"  required="true">
+            <app-icon-hour class="icon-select"></app-icon-hour>
+          </app-text-input>
+        </div>
+        <div class="input-form">
+          <app-text-input mask="00:00" title="Hora Final" placeholder="Hora Final" required="true">
+            <app-icon-hour class="icon-select"></app-icon-hour>
+          </app-text-input>
+        </div>
+      </div>
+      <div class="container-div-radio">
+        <label class="default-label">Tipo de Apontamento</label>
+        <mat-radio-group>
+          <mat-radio-button class="radio-sheet" value="Timesheet">Timesheet</mat-radio-button>
+          <mat-radio-button class="radio-sheet" value="Ação">Ação</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="container-div">
+        <div class="input-form">
+          <app-select-input-autocomplete 
+            required="true" 
+            title="Projeto/Elemento PEP" 
+            placeholder="Selecione o Projeto" 
+            [items]="items">
+          </app-select-input-autocomplete>
+        </div>
+        <div class="input-form">
+          <app-select-input-autocomplete 
+            required="true" 
+            title="Atividade" 
+            placeholder="Selecione" 
+            [items]="items">
+          </app-select-input-autocomplete>
+        </div>
+        <div class="input-form">
+          <app-upload-button></app-upload-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-content">
+  <button class="cancel-btn">Cancelar</button>
+  <button class="save-btn">Salvar</button>
+</div>

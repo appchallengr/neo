@@ -1,0 +1,67 @@
+<div class="mop-content">
+  <div class="header-details">
+    <div class="left-header-details">
+      <h1 class="appointment-title">
+          Apontamento de horas
+      </h1>
+    </div>
+    <div>
+      <button mat-flat-button class="square-button green-button" [routerLink]="['novo']">
+          <mat-icon>add</mat-icon> Apontar horas
+      </button>
+    </div>
+  </div>
+  <div class="container-list">
+    <table class="table-neo">
+      <thead>
+        <th 
+          *ngFor="let column of columns" 
+          class="thGrid sortFunc"
+          (click)="sort(column)"
+        >
+          <span>{{column.name}}</span>
+          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12.9434L0.5 9.4434L1.205 8.7384L4 11.5284L6.795 8.7384L7.5 9.4434L4 12.9434Z" fill="#ADB895"/>
+            <path d="M4 0.943359L7.5 4.44336L6.795 5.14836L4 2.35836L1.205 5.14836L0.5 4.44336L4 0.943359Z" fill="#ADB895"/>
+          </svg>  
+        </th>
+      </thead>
+      <tr *ngIf="loading">
+        <td colspan="6">
+          <div class="loader">
+
+          </div>
+        </td>
+      </tr>
+      <tbody *ngIf="!loading">
+        <tr *ngFor="let data of result; last as isLast" class="trTable" routerLink="/apontamentos/detalhes/{{data.id}}">
+          <td class="tdTable">
+            <span class="dateInput">
+              {{data.start_date | date: 'MMMM yyyy' | titlecase}}
+            </span>       
+          </td>
+          <td class="tdTable">
+            <span>
+              {{data.start_date | date: 'dd/MM/yyyy'}} à {{data.end_date | date: 'dd/MM/yyyy'}}
+            </span>  
+          </td>
+          <td class="tdTable">
+            <span>
+              {{convertToHour(data.max_minutes)}} h
+            </span>  
+          </td>
+          <td class="tdTable">
+            <span>
+              {{convertToHour(data.registered_minutes)}} h
+            </span>  
+          </td>
+          <td class="tdTable">
+            <span>
+              <app-btn-status [status]="data.status"></app-btn-status>
+            </span>  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

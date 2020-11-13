@@ -1,0 +1,351 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+html, body { background: #fafbfc; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Style Buttons */
+
+.square-button{
+    border-radius: 8px !important;
+    padding-right: 28px !important;
+    height: 40px !important;
+    font-family: 'Roboto' !important;
+    font-weight: 500 !important;
+}
+
+.square-button .material-icons{
+    font-size: 19px !important;
+}
+
+.square-button .mat-icon{
+    height: 20px !important;
+    width: 16px !important;
+    margin-right: 10px !important;
+}
+
+.green-button{
+    background-color: #6E8E25;
+    color: #ffffff;
+}
+
+.mop-content{
+    display: flex;
+    flex-direction: column;
+    width: 90vmax;
+    padding-top: 5px;
+}
+
+.align-left{
+    padding: 56px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.rascunho-mini{
+    background-color: #fdbd2e;
+    color: #FFF;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 3px;
+    font-size: 12px;
+    width: 70px;
+    text-align: center;
+}
+
+.green-span{
+    color: #6E8E25;
+}
+
+.avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.avatar-green{
+    background-color: #6e8e25;
+    color: #FFF;
+}
+
+.avatar-orange{
+    background-color: #ef8725;
+    color: #FFF;
+}
+
+.appointment-title {
+    font-size: 26px;
+    line-height: 40px !important;
+    font-weight: 900 !important;
+    color: #6E8E25;
+    margin-bottom: 0px !important;
+    font-family: 'Roboto';
+}
+
+.icon-select{
+    position: absolute;
+    left: 10px;
+}
+
+.error-state-input{
+    background: #FEEFEF;
+    border: 1px solid #DA1414;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+input:focus{
+    border: 2px solid #6E8E25;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+select:focus{
+    border: 2px solid #6E8E25 !important;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    opacity: 0 !important; /*click effect color change*/
+    background-color: #6E8E25 !important;  }
+    
+    .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #6E8E25 !important; /*inner circle color change*/  }
+    
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #6E8E25 !important; /*outer ring color change*/  }
+
+.default-label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 10px;
+    color: #405216 ;
+}
+
+.mat-radio-label-content{
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ng-select{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+.ng-select .ng-select-container{
+    background-color: transparent;
+    border: 1px solid #6E8E25;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #507F29;
+}
+
+.ng-select.ng-select-opened>.ng-select-container{
+    border:1px solid #6E8E25
+}
+
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
+    border:2px solid #6E8E25 !important;
+    box-shadow: none !important;
+}
+
+.ng-select.ng-select-single .ng-select-container{
+    height: 46px !important;
+    padding-left: 10px !important;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-input>input{
+    height: 32px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #507F29;
+    padding-left: 10px !important;
+    box-sizing: border-box;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #507F29;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #507F29;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #507F29;
+  }
+
+  .save-btn{
+    background: #A7CCE9;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px; 
+    color: #FFF;
+    border: none;
+    margin: 5px;
+    min-width: 87px;
+  }
+
+  .cancel-btn{
+    background: #FFE8EA;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px; 
+    color: #FF6F79;
+    border: none;
+    margin: 5px;
+    min-width: 87px; 
+  }
+
+  table{
+      width: 100%;
+  }
+
+  .thGrid{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #ADB895;
+    text-transform: uppercase;
+    text-align: left;
+    height: 48px;
+  }
+
+  .thGrid span{
+      padding: 20px;
+  }
+
+  .trTable{
+    background: #FFF;
+    border-radius: 8px;
+    height: 56px;
+    box-sizing: border-box;
+  }
+
+  .tdTable span{
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #353731;
+  }
+
+  .table-neo{
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin-top: 30px;
+  }
+
+  .table-neo td:first-child {
+    border-left-style: solid #FFF;
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px;
+}
+.table-neo td:last-child {
+    border-right-style: solid #FFF;
+    border-bottom-right-radius: 8px; 
+    border-top-right-radius: 8px; 
+}
+
+.sortFunc{
+    cursor: pointer;
+}
+
+input[type="button"]{
+    outline:none;
+ }
+ .loader,
+ .loader:before,
+ .loader:after {
+   border-radius: 50%;
+   width: 1.1em;
+   height: 1.1em;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation: load7 1.0s infinite ease-in-out;
+   animation: load7 1.0s infinite ease-in-out;
+ }
+ .loader {
+   color: #507F29;
+   font-size: 10px;
+   margin: 80px auto;
+   position: relative;
+   text-indent: -9999em;
+   -webkit-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   transform: translateZ(0);
+   -webkit-animation-delay: -0.16s;
+   animation-delay: -0.16s;
+ }
+ .loader:before,
+ .loader:after {
+   content: '';
+   position: absolute;
+   top: 0;
+ }
+ .loader:before {
+   left: -3.5em;
+   -webkit-animation-delay: -0.32s;
+   animation-delay: -0.32s;
+ }
+ .loader:after {
+   left: 3.5em;
+ }
+ @-webkit-keyframes load7 {
+   0%,
+   80%,
+   100% {
+     box-shadow: 0 2.5em 0 -1.3em;
+   }
+   40% {
+     box-shadow: 0 2.5em 0 0;
+   }
+ }
+ @keyframes load7 {
+   0%,
+   80%,
+   100% {
+     box-shadow: 0 2.5em 0 -1.3em;
+   }
+   40% {
+     box-shadow: 0 2.5em 0 0;
+   }
+ }
+ 

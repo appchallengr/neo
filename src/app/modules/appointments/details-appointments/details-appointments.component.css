@@ -1,0 +1,160 @@
+.header-details{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.select-details{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-select-header{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    line-height: 0px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.mat-container-header{
+    padding: 10px;
+}
+
+.select-period{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.select-period:hover{
+    background-color: #e4e8db;
+    color: #565851;
+}
+
+.container-mini-button{
+    margin-left: 40px;
+}
+
+.container-list{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.topic{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.row-topic{
+    background-color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    font-weight: 400;
+    position: relative;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+}
+
+.content-row{
+    width: 40%;
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.content-row-midle{
+    width: 15%;
+    align-items: center;
+    display: flex;
+}
+
+.content-row-right{
+    width: 15%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    color: #6e8e25;
+}
+
+
+
+.last-div{
+    position: absolute;
+    right: 10px;
+    margin-top: 5px;
+}
+
+.select-edit{
+    padding: 6px;
+    box-sizing: border-box;
+    font-size: 12px;
+    cursor: pointer;
+    color: #405216;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.select-edit span{
+    margin-left: 10px;
+}
+
+.select-edit:hover{
+    background-color: #e4e8db;
+    color: #565851;
+}
+
+.mat-menu-panel {
+    padding: 5px !important;
+}
+
+.icon-div{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.footer-content{
+    width: 100%;
+    position: fixed;
+    background-color: #FFF;
+    left: 0px;
+    bottom: 0px;
+    margin-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #e8f2f8;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.max-period{
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.total-period{
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.size-icon{
+    width: 24px;
+}
+

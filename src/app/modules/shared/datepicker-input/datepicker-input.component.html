@@ -1,0 +1,8 @@
+<div class="input-datepicker">
+    <label class="label-datepicker">{{title}} <span class="required" *ngIf="required">*</span></label>
+    <div class="container-input-datepicker">
+      <app-icon-date class="icon-datepicker"></app-icon-date>
+      <input [(ngModel)]="value" placeholder="dd/mm/aaaa" (click)="picker.open()" (focus)="picker.open()" (keydown)="picker.open()" [matDatepicker]="picker" [formControl]="date" />
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+  </div>

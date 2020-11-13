@@ -1,0 +1,127 @@
+<div class="mop-content" *ngIf="!loading">
+    <div class="container-button">
+        <app-btn-back rota="/apontamentos"></app-btn-back>
+    </div> 
+    
+    <div class="header-details">
+        <div class="left-header-details">
+            <h1 class="appointment-title">
+                Apontamento de horas
+            </h1>
+            <div class="select-details">
+                <div>
+                    <button mat-button [matMenuTriggerFor]="menu" class="menu-select-header">
+                        Janeiro 2020 - 22/12/19 à 23/01/2020
+                        <mat-icon class="iconArrow">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <div class="select-period">
+                            {{period.start_date | date: 'MMMM yyyy' | titlecase}} - {{period.start_date | date: 'dd/MM/yyyy'}} à {{period.end_date | date: 'dd/MM/yyyy'}}
+                        </div>
+                    </mat-menu>
+                </div>
+                <div class="container-mini-button">
+                    <app-btn-status [status]="period.status"></app-btn-status>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button disabled mat-flat-button class="square-button green-button" [routerLink]="['novo']">
+                <mat-icon>add</mat-icon> Apontar horas
+            </button>
+        </div>
+    </div>
+    <div class="container-list" *ngIf="topics">
+        <div *ngFor="let item of topics">
+            <div class="topic">
+                {{item.value | date: 'dd/MM/yyyy'}} ({{item.value | date: 'EEEE' | titlecase}}) <span class="green-span">{{convertToHour(item.sum)}} horas apontadas</span> de {{convertToHour(maxMinutes)}} previstas
+            </div>
+            <div class="container-topic">
+                <div class="row-topic">
+                    <div class="avatar avatar-green">R</div>
+                    <div class="content-row">
+                        NPPF005I - ACOMPANHAR A ENERGIZACAO FISICA DA OBRA 
+                    </div>
+                    <div class="content-row-midle">
+                        das 8:00 h às 12:00
+                    </div>
+                    <div class="content-row-midle">
+                        total de: 4 horas
+                    </div>
+                    <div class="content-row-right">
+                        <app-icon-evidence></app-icon-evidence>
+                        <span>
+                            1 evidência
+                        </span>
+                    </div>
+                    <div class="last-div">
+                        <div mat-button [matMenuTriggerFor]="menuDetalhe" class="menu-select-header">
+                            <mat-icon class="iconArrow">more_vert</mat-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-topic">
+                    <div class="avatar avatar-orange">T</div>
+                    <div class="content-row">
+                        NPPF005I - ACOMPANHAR A ENERGIZACAO FISICA DA OBRA 
+                    </div>
+                    <div class="content-row-midle">
+                        das 8:00 h às 12:00
+                    </div>
+                    <div class="content-row-midle">
+                        total de: 4 horas
+                    </div>
+                    <div class="content-row-right">
+                        <app-icon-evidence></app-icon-evidence>
+                        <span>
+                            1 evidência
+                        </span>
+                    </div>
+                    <div class="last-div">
+                        <div mat-button [matMenuTriggerFor]="menuDetalhe" class="menu-select-header">
+                            <mat-icon class="iconArrow">more_vert</mat-icon>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<div class="footer-content" (click)="sendForm()">
+    <div class="max-period">Máximo no período: 150:00 h</div>
+    <div class="total-period">Total Apontado: 76:00 h</div>
+    <button disabled mat-flat-button class="square-button green-button" [routerLink]="['apontamentos']">
+        Enviar para Aprovação
+    </button>
+</div>
+
+<mat-menu #menuDetalhe="matMenu">
+    <div class="select-edit">
+        <app-icon-edit-appointment class="size-icon"></app-icon-edit-appointment>
+        <span>Editar Apontamento</span>
+    </div>
+    <div class="select-edit">
+        <app-icon-duplicate-appointment class="size-icon"></app-icon-duplicate-appointment>
+        <span>Duplicar</span>
+    </div>
+    <div class="select-edit">
+        <app-icon-attach class="size-icon"></app-icon-attach>
+        <span>Anexar Evidência</span>
+    </div>
+    <div class="select-edit">
+        <app-icon-delete class="size-icon"></app-icon-delete>
+        <span>Excluir</span>
+    </div>
+</mat-menu>
+
+<app-notification
+    *ngIf="notification"
+    (close)="closeNotification()"
+    text="Apontamento Salvo com Sucesso!">
+</app-notification>

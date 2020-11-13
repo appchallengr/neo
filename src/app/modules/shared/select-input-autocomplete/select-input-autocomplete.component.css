@@ -1,0 +1,19 @@
+.container-select-auto{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-select-auto{
+    padding-left: 16px;
+    box-sizing: border-box;
+    color: #303E11;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.required{
+    color: red;
+}
